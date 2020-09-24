@@ -22,7 +22,14 @@ std::vector<int> MatchVectors(std::vector<int> a, std::vector<int> b);
 
 // divides an input integer by 2 until it is impossible to do so, then returns the final number.
 // (16 = 2 * 2 * 2 * 2 * 1 -> 1, 7 -> 7, 26 = 2 * 13 -> 13, 52 = 2 * 2 * 13 -> 13)
-int RemoveTwos(int original);
+int RemoveTwos(int original){
+	if(original % 2 != 0)
+	{
+		std::cout << original << '\n';
+		return original;
+	}
+	RemoveTwos(original/2);
+}
 
 // takes a vector of integers and removes all elements evenly divisible by the passed in int
 std::vector<int> MultiplesFilter(std::vector<int>, int divides_by);
@@ -53,7 +60,12 @@ std::vector<int> Multiples(int n, int m);
 std::vector<int> SquaresUntil(int n);
 
 // takes an int, n, and returns the nth value of the fibonacci sequence (1, 1, 2, 3, 5, 8, 13, ...)
-int NthFibonacci(int n);
+int NthFibonacci(int n){
+	if (n <= 1) {
+		return n
+	}
+  return NthFibonacci(n-1) + NthFibonacci(n-2);
+}
 
 // takes an int, n, and returns the factorial of that int (n!)
 int Factorial(int n);
