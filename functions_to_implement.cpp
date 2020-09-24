@@ -62,7 +62,7 @@ std::vector<int> SquaresUntil(int n);
 // takes an int, n, and returns the nth value of the fibonacci sequence (1, 1, 2, 3, 5, 8, 13, ...)
 int NthFibonacci(int n){
 	if (n <= 1) {
-		return n
+		return n;
 	}
   return NthFibonacci(n-1) + NthFibonacci(n-2);
 }
